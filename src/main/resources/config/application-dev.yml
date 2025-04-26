@@ -36,6 +36,9 @@ management:
       probability: 1.0 # report 100% of traces
 
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
   devtools:
     restart:
       enabled: true
@@ -93,11 +96,11 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   logging:
-#    level:
-#      org:
-#        springframework:
-#          security: DEBUG
-#          web: DEBUG
+    #    level:
+    #      org:
+    #        springframework:
+    #          security: DEBUG
+    #          web: DEBUG
     use-json-format: false # By default, logs are not in Json format
     logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
       enabled: false
@@ -124,6 +127,3 @@ security:
         keycloak:
           client-id: jhipster-ms1
           client-secret: passer
-
-
-
